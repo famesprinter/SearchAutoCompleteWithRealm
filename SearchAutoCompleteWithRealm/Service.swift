@@ -27,12 +27,14 @@ struct Service: ServiceType {
     }
     
     // Function
-    func searchCars(char: String) {
+    func searchCars(char: String) -> [Car] {
         do {
             let realm = try Realm()
             let result = realm.objects(Car.self).filter("name contains[c] '\(char)'")
-            print(result)
-        } catch _ {}
+            return Array(result)
+        } catch _ {
+            return []
+        }
     }
     
     // Private Function

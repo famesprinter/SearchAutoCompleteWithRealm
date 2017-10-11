@@ -1,4 +1,5 @@
 import UIKit
+import RxSwift
 
 class SearchFroAddViewController: UIViewController {
     // MARK: - IBOutlet
@@ -7,8 +8,9 @@ class SearchFroAddViewController: UIViewController {
     // MARK: - Variable
     let service = Service()
     let searchController = UISearchController(searchResultsController: nil)
+    let disposeBag = DisposeBag()
     
-    var result = [Car]()
+    var result = Variable([Car]())
     
     // MARK: - Life Cycle
     override func viewDidLoad() {
@@ -23,6 +25,13 @@ class SearchFroAddViewController: UIViewController {
         searchController.searchBar.tintColor = .white
         let leftNavBarButton = UIBarButtonItem(customView:searchController.searchBar)
         navigationItem.leftBarButtonItem = leftNavBarButton
+        
+        result.asObservable()
+            .skip(1)
+            .subscribe(onNext: { [weak self] _ in
+                self?.tableView.reloadData()
+            })
+            .disposed(by: disposeBag)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -38,12 +47,12 @@ class SearchFroAddViewController: UIViewController {
 
 extension SearchFroAddViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return result.count
+        return result.value.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
-        cell.textLabel?.text = result[indexPath.row].name
+        cell.textLabel?.text = result.value[indexPath.row].name
         return cell
     }
 }
@@ -66,7 +75,10 @@ extension SearchFroAddViewController: UISearchControllerDelegate, UISearchResult
         }
         
         if !searchBarText.isEmpty && searchController.isActive {
-            let result = service.searchCars(char: searchBarText)
+            let searchResult = service.searchCars(char: searchBarText)
+            result.value = searchResult
+        } else if searchController.isActive {
+            result.value = []
         }
     }
 }
