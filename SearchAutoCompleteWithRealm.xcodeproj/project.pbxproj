@@ -11,6 +11,7 @@
 		FB24A5931F8DDF6C00935EE3 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB24A5921F8DDF6C00935EE3 /* Car.swift */; };
 		FB24A5971F8DE02800935EE3 /* ServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB24A5961F8DE02800935EE3 /* ServiceType.swift */; };
 		FB24A5991F8DE03700935EE3 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB24A5981F8DE03700935EE3 /* Service.swift */; };
+		FB24A59B1F8DE31400935EE3 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB24A59A1F8DE31400935EE3 /* ViewModel.swift */; };
 		FBC1CB191F8B820100FB6E52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC1CB181F8B820100FB6E52 /* AppDelegate.swift */; };
 		FBC1CB1B1F8B820100FB6E52 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC1CB1A1F8B820100FB6E52 /* ViewController.swift */; };
 		FBC1CB1E1F8B820100FB6E52 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBC1CB1C1F8B820100FB6E52 /* Main.storyboard */; };
@@ -25,6 +26,7 @@
 		FB24A5921F8DDF6C00935EE3 /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
 		FB24A5961F8DE02800935EE3 /* ServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceType.swift; sourceTree = "<group>"; };
 		FB24A5981F8DE03700935EE3 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		FB24A59A1F8DE31400935EE3 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		FBC1CB151F8B820100FB6E52 /* SearchAutoCompleteWithRealm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SearchAutoCompleteWithRealm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBC1CB181F8B820100FB6E52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FBC1CB1A1F8B820100FB6E52 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				FB24A5961F8DE02800935EE3 /* ServiceType.swift */,
 				FB24A5981F8DE03700935EE3 /* Service.swift */,
 				FB24A5921F8DDF6C00935EE3 /* Car.swift */,
+				FB24A59A1F8DE31400935EE3 /* ViewModel.swift */,
 				FBC1CB1A1F8B820100FB6E52 /* ViewController.swift */,
 				FBC1CB1C1F8B820100FB6E52 /* Main.storyboard */,
 				FBC1CB1F1F8B820100FB6E52 /* Assets.xcassets */,
@@ -224,6 +227,7 @@
 				FBC1CB1B1F8B820100FB6E52 /* ViewController.swift in Sources */,
 				FB24A5991F8DE03700935EE3 /* Service.swift in Sources */,
 				FBC1CB191F8B820100FB6E52 /* AppDelegate.swift in Sources */,
+				FB24A59B1F8DE31400935EE3 /* ViewModel.swift in Sources */,
 				FB24A5931F8DDF6C00935EE3 /* Car.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
