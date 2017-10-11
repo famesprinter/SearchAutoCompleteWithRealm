@@ -8,6 +8,8 @@ class SearchFroAddViewController: UIViewController {
     let service = Service()
     let searchController = UISearchController(searchResultsController: nil)
     
+    var result = [Car]()
+    
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,11 +38,13 @@ class SearchFroAddViewController: UIViewController {
 
 extension SearchFroAddViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return result.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell = UITableViewCell()
+        cell.textLabel?.text = result[indexPath.row].name
+        return cell
     }
 }
 
@@ -61,9 +65,8 @@ extension SearchFroAddViewController: UISearchControllerDelegate, UISearchResult
             return
         }
         
-        if !searchBarText.isEmpty || searchController.isActive {
-            print(searchController.isActive)
-            print("Update Search..")
+        if !searchBarText.isEmpty && searchController.isActive {
+            let result = service.searchCars(char: searchBarText)
         }
     }
 }

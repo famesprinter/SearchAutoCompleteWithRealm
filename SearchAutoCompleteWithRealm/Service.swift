@@ -27,6 +27,13 @@ struct Service: ServiceType {
     }
     
     // Function
+    func searchCars(char: String) {
+        do {
+            let realm = try Realm()
+            let result = realm.objects(Car.self).filter("name contains[c] '\(char)'")
+            print(result)
+        } catch _ {}
+    }
     
     // Private Function
     fileprivate func createNewCar(id: String, name: String) -> Car {

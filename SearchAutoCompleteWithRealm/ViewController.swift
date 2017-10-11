@@ -12,6 +12,10 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
     }
+    
+    deinit {
+        print("ViewController DEINIT ><")
+    }
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
