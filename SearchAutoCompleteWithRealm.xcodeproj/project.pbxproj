@@ -93,8 +93,8 @@
 				FB24A59A1F8DE31400935EE3 /* ViewModel.swift */,
 				FBC1CB1A1F8B820100FB6E52 /* ViewController.swift */,
 				FBC1CB1C1F8B820100FB6E52 /* Main.storyboard */,
-				FBC1CB1F1F8B820100FB6E52 /* Assets.xcassets */,
 				FBC1CB211F8B820100FB6E52 /* LaunchScreen.storyboard */,
+				FBC1CB1F1F8B820100FB6E52 /* Assets.xcassets */,
 				FBC1CB241F8B820100FB6E52 /* Info.plist */,
 			);
 			path = SearchAutoCompleteWithRealm;
