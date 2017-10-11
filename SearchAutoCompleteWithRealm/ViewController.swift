@@ -5,8 +5,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     // MARK: - Variable
-    let viewModel = ViewModel(service: Service())
-    
     var myCars = [Car]()
     
     // MARK: - Life Cycle
