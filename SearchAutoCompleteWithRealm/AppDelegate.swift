@@ -1,18 +1,9 @@
-//
-//  AppDelegate.swift
-//  SearchAutoCompleteWithRealm
-//
-//  Created by Kittitat Rogphotong on 10/9/2560 BE.
-//  Copyright © 2560 FameSprinter. All rights reserved.
-//
-
 import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
